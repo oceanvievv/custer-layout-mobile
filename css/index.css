@@ -32,8 +32,8 @@ body {
     user-select: none;
 }
 .header_burger_default {
-    width: 20px;
-    height: 16px;
+    width: 17px;
+    height: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,8 +80,8 @@ body {
 
 /* burger */
 .header_burger_expanded {
-    width: 28px;
-    height: 16px;
+    width: 22px;
+    height: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,11 +113,11 @@ body {
 /* sub-header */
 .sub-header {
     max-width: 100%;
-    height: 275px;
+    max-height: 275px;
     padding: 20px 23px 25px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 50px;
 }
 .sub-header-shown {
     display: flex;
@@ -143,7 +143,7 @@ body {
     text-decoration: none;
     color: black;
 }
-.sub-header .go-to {
+.sub-header .go-to .go-back-icon {
     width: 6px;
     height: 12px;
     display: flex;
@@ -169,3 +169,50 @@ body {
     color: black;
 }
 
+/* sub-header pages*/
+.sub-header-clothes, .sub-header-shoes, .sub-header-accessories, .sub-header-brands, .sub-header-help {
+    max-width: 100%;
+    height: 235px;
+    padding: 20px 23px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sub-header-clothes-shown, .sub-header-shoes-shown, .sub-header-accessories-shown, .sub-header-brands-shown, .sub-header-help-shown {
+    display: flex;
+}
+.sub-header-clothes-hidden, .sub-header-shoes-hidden, .sub-header-accessories-hidden, .sub-header-brands-hidden, .sub-header-help-hidden {
+    display: none;
+}
+.sub-header-clothes .go-back-to, .sub-header-shoes .go-back-to, .sub-header-accessories .go-back-to, .sub-header-brands .go-back-to, .sub-header-help .go-back-to {
+    max-width: 100%;
+    font-family: "Dealerplate";
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+}
+.sub-header-clothes .go-back, .sub-header-shoes .go-back, .sub-header-accessories .go-back, .sub-header-brands .go-back, .sub-header-help .go-back{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: black;
+}
+.clothes-categories, .shoes-categories, .accessories-categories, .brands-categories, .help-categories {
+    display: flex;
+    flex-direction: row;
+    gap: 37px;
+}
+.clothes-categories-1, .clothes-categories-2, .shoes-categories-1, .shoes-categories-2, .accessories-categories-1, .accessories-categories-2, .brands-categories-1, .brands-categories-2, .help-categories-1, .help-categories-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+.clothes-category, .shoes-category, .accessories-category, .brands-category, .help-category {
+    font-family: "Dealerplate";
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+}

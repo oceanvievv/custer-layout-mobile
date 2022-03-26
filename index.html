@@ -12,15 +12,15 @@
 <body>
     <div class="header">
         <!-- Burger -->
-        <div id="header_burger_default" class="header_burger_default burger_shown" onclick="changeBurgerIcon()">
-            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div id="header_burger_default" class="header_burger_default burger_shown" onclick="openSubHeader()">
+            <svg width="17" height="14" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="0.9" y1="1.1" x2="19.1" y2="1.1" stroke="black" stroke-width="1.8" stroke-linecap="round"/>
                 <line x1="0.9" y1="8.1" x2="19.1" y2="8.1" stroke="black" stroke-width="1.8" stroke-linecap="round"/>
                 <line x1="0.9" y1="15.1" x2="19.1" y2="15.1" stroke="black" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
         </div>
-        <div id="header_burger_expanded" class="header_burger_expanded burger-hidden" onclick="changeBurgerIcon()">
-            <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div id="header_burger_expanded" class="header_burger_expanded burger-hidden" onclick="closeSubHeader()">
+            <svg width="22" height="18" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="7.9" y1="1.1" x2="26.1" y2="1.1" stroke="black" stroke-width="1.8" stroke-linecap="round"/>
                 <line x1="7.9" y1="15.1" x2="26.1" y2="15.1" stroke="black" stroke-width="1.8" stroke-linecap="round"/>
                 <path d="M2 8H26.1016" stroke="black" stroke-width="1.8" stroke-linecap="round"/>
@@ -58,7 +58,7 @@
 
     <div id="sub-header" class="sub-header sub-header-hidden">
         <div class="categories">
-            <a href="#" class="item">
+            <a href="#" class="item" onclick="openClothesMenu()">
                 Одежда
                 <div class="go-to">
                     <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +66,7 @@
                     </svg>
                 </div>
             </a>
-            <a href="#" class="item">
+            <a href="#" class="item" onclick="openShoesMenu()">
                 Обувь
                 <div class="go-to">
                     <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +74,7 @@
                     </svg>
                 </div>
             </a>
-            <a href="#" class="item">
+            <a href="#" class="item" onclick="openAccessoriesMenu()">
                 Аксессуары
                 <div class="go-to">
                     <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +82,7 @@
                     </svg>
                 </div>
             </a>
-            <a href="#" class="item">
+            <a href="#" class="item" onclick="openBrandsMenu()">
                 Бренды
                 <div class="go-to">
                     <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,7 +90,7 @@
                     </svg>
                 </div>
             </a>
-            <a href="#" class="item">
+            <a href="#" class="item"  onclick="openHelpMenu()">
                 Помощь
                 <div class="go-to">
                     <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,10 +110,196 @@
         </div>
     </div>
 
+    <div id="sub-header-clothes" class="sub-header-clothes sub-header-clothes-hidden">
+        <a href="#" class="go-back" onclick="closeClothesMenu()">
+            <div class="go-back-icon">
+                <svg width="6" height="12" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 1L1.24461 6.23093C1.10591 6.3835 1.10591 6.6165 1.24461 6.76907L6 12" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>    
+            </div>
+            <div class="go-back-to">
+                Одежда
+            </div>
+        </a>
+        <div class="clothes-categories">
+            <div class="clothes-categories-1">
+                <div class="clothes-category">
+                    Брюки
+                </div>
+                <div class="clothes-category">
+                    Куртки
+                </div>
+                <div class="clothes-category">
+                    Лонгсливы
+                </div>
+                <div class="clothes-category">
+                    Рубашки
+                </div>
+                <div class="clothes-category">
+                    Свитшоты
+                </div>
+                <div class="clothes-category">
+                    Футболки
+                </div>
+            </div>
+            <div class="clothes-categories-2">
+                <div class="clothes-category">
+                    Худи
+                </div>
+                <div class="clothes-category">
+                    Шорты
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sub-header-shoes" class="sub-header-shoes sub-header-shoes-hidden">
+        <a href="#" class="go-back" onclick="closeShoesMenu()">
+            <div class="go-back-icon">
+                <svg width="6" height="12" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 1L1.24461 6.23093C1.10591 6.3835 1.10591 6.6165 1.24461 6.76907L6 12" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>    
+            </div>
+            <div class="go-back-to">
+                Обувь
+            </div>
+        </a>
+        <div class="shoes-categories">
+            <div class="shoes-categories-1">
+                <div class="shoes-category">
+                    Ботинки
+                </div>
+                <div class="shoes-category">
+                    Кеды
+                </div>
+                <div class="shoes-category">
+                    Кроссовки
+                </div>
+                <div class="shoes-category">
+                    Туфли
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sub-header-accessories" class="sub-header-accessories sub-header-accessories-hidden">
+        <a href="#" class="go-back" onclick="closeAccessoriesMenu()">
+            <div class="go-back-icon">
+                <svg width="6" height="12" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 1L1.24461 6.23093C1.10591 6.3835 1.10591 6.6165 1.24461 6.76907L6 12" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>    
+            </div>
+            <div class="go-back-to">
+                Аксессуары
+            </div>
+        </a>
+        <div class="accessories-categories">
+            <div class="accessories-categories-1">
+                <div class="accessories-category">
+                    Балаклавы
+                </div>
+                <div class="accessories-category">
+                    Кепки
+                </div>
+                <div class="accessories-category">
+                    Носки
+                </div>
+                <div class="accessories-category">
+                    Ремни
+                </div>
+                <div class="accessories-category">
+                    Рюкзаки
+                </div>
+                <div class="accessories-category">
+                    Сумки
+                </div>
+            </div>
+            <div class="accessories-categories-2">
+                <div class="accessories-category">
+                    Цепи
+                </div>
+                <div class="accessories-category">
+                    Шапки
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sub-header-brands" class="sub-header-brands sub-header-brands-hidden">
+        <a href="#" class="go-back" onclick="closeBrandsMenu()">
+            <div class="go-back-icon">
+                <svg width="6" height="12" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 1L1.24461 6.23093C1.10591 6.3835 1.10591 6.6165 1.24461 6.76907L6 12" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>    
+            </div>
+            <div class="go-back-to">
+                Бренды
+            </div>
+        </a>
+        <div class="brands-categories">
+            <div class="brands-categories-1">
+                <div class="brands-category">
+                    Amik Studio
+                </div>
+                <div class="brands-category">
+                    Nikifilini
+                </div>
+                <div class="brands-category">
+                    Steno515
+                </div>
+                <div class="brands-category">
+                    Torch
+                </div>
+                <div class="brands-category">
+                    Провинция
+                </div>
+                <div class="brands-category">
+                    Все бренды
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sub-header-help" class="sub-header-help sub-header-help-hidden">
+        <a href="#" class="go-back" onclick="closeHelpMenu()">
+            <div class="go-back-icon">
+                <svg width="6" height="12" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 1L1.24461 6.23093C1.10591 6.3835 1.10591 6.6165 1.24461 6.76907L6 12" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>    
+            </div>
+            <div class="go-back-to">
+                Помощь
+            </div>
+        </a>
+        <div class="help-categories">
+            <div class="help-categories-1">
+                <div class="help-category">
+                    О товаре
+                </div>
+                <div class="help-category">
+                    Размерная сетка
+                </div>
+                <div class="help-category">
+                    Доставка
+                </div>
+                <div class="help-category">
+                    Возврат
+                </div>
+                <div class="help-category">
+                    О заказах
+                </div>
+                <div class="help-category">
+                    Все разделы
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Blur -->
     <div id="header-blur" class="header-blur blur-hidden"></div>
 
     <script src="js/changeBurgerIcon.js"></script>
+    <script src="js/changeSubHeaderPage.js"></script>
 </body>
 
 </html>
