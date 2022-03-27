@@ -1,0 +1,51 @@
+/* Switch between desktop and mobile versions */
+@media (min-width: 768px) {
+    .header-mobile {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .header-desktop {
+        display: none;
+    }
+}
+
+/* Adaptive desktop */
+@media (max-width: 1280px) {
+    .header-desktop {
+        padding: 0 100px;
+    }
+    .header-desktop .nav {
+        gap: 35px
+    }
+}
+@media (max-width: 1024px) {
+    .header-desktop {
+        padding: 0 70px;
+    }
+    .header-desktop .nav {
+        gap: 25px;
+    }
+    .header-desktop .logo {
+        font-size: 32px;
+    }
+    .header-desktop .nav .nav-item {
+        font-size: 21px;
+    }
+    .header-desktop .user-menu .search {
+        width: 20px;
+        height: 20px;
+    }
+    .header-desktop .user-menu .profile {
+        width: 18px;
+        height: 20px;
+    }
+    .header-desktop .user-menu .favorite {
+        width: 22px;
+        height: 20px;
+    }
+    .header-desktop .user-menu .cart {
+        width: 22px;
+        height: 22px;
+    }
+}
