@@ -161,6 +161,11 @@ body {
     letter-spacing: 0.05em;
 }
 .sub-header .auth-and-favorites .auth {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+.sub-header .auth-and-favorites .auth a {
     text-decoration: none;
     color: black;
 }
@@ -215,5 +220,7 @@ body {
     font-size: 17px;
     line-height: 20px;
     letter-spacing: 0.05em;
+    text-decoration: none;
+    color: black;
 }
 
