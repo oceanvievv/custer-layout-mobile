@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="header-mobile">
+    <div id="header-mobile" class="header-mobile">
         <!-- Burger -->
         <div id="header_burger_default" class="header_burger_default burger_shown" onclick="openSubHeader()">
             <svg width="17" height="14" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,7 @@
         </div>
 
         <!-- Logo -->
-        <a href="index.html" class="header_logo">
+        <a href="index.html" id="header_logo" class="header_logo">
             <span>
                 Custer
             </span>
@@ -38,12 +38,12 @@
 
         <!-- Menu -->
         <div class="header_menu">
-            <div class="menu_search">
+            <div id="menu_search" class="menu_search" onclick="hideHeaderElements()">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6345 6.01727C10.6345 8.56731 8.56731 10.6345 6.01727 10.6345C3.46722 10.6345 1.4 8.56731 1.4 6.01727C1.4 3.46722 3.46722 1.4 6.01727 1.4C8.56731 1.4 10.6345 3.46722 10.6345 6.01727ZM9.75141 10.736C8.7254 11.549 7.42803 12.0345 6.01727 12.0345C2.69402 12.0345 0 9.34051 0 6.01727C0 2.69402 2.69402 0 6.01727 0C9.34051 0 12.0345 2.69402 12.0345 6.01727C12.0345 7.42529 11.5509 8.72036 10.7407 9.74544L15.4949 14.4996C15.7683 14.773 15.7683 15.2162 15.4949 15.4896C15.2215 15.7629 14.7783 15.7629 14.505 15.4896L9.75141 10.736Z" fill="black"/>
                 </svg>
             </div>
-            <a href="pages/cart.html" class="menu_cart">
+            <a href="pages/cart.html" id="menu_cart" class="menu_cart">
                 <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.01422 3.55612L1.24595 15.5666" stroke="black" stroke-width="1.2" stroke-linecap="round"/>
                     <path d="M13.9522 4.34237L12.992 16.6737" stroke="black" stroke-width="1.2" stroke-linecap="round"/>
@@ -55,6 +55,10 @@
                 </svg>
             </a>
         </div>
+
+        <!-- Search Input -->
+        <input id="search_input" type="text">
+        <div id="search_button">x</div>
     </div>
 
     <div id="sub-header" class="sub-header sub-header-hidden">
@@ -303,6 +307,7 @@
 
     <script src="js/changeBurgerIcon.js"></script>
     <script src="js/changeSubHeaderPage.js"></script>
+    <script src="js/handleSearchIconClick.js"></script>
 </body>
 
 </html>
