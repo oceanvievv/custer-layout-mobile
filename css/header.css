@@ -273,6 +273,7 @@ body {
     font-family: 'Dealerplate';
     letter-spacing: 0.05em;
     padding: 0;
+    vertical-align: middle;
 }
 .search-input-wrapper input:focus {
     outline: none;
