@@ -18,8 +18,12 @@ function hideHeaderElements() {
     }
     
     const header = document.getElementById("header-mobile");
+    const search = document.getElementById("search");
+
     header.classList.remove("header-mobile");
     header.classList.add("header-mobile-with-search");
+
+    search.classList.toggle("search-wrapper-hidden")
 }
 
 function showHeaderElements() {
